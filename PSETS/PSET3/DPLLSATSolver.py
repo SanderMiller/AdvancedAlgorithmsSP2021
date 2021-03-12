@@ -136,7 +136,7 @@ def allSymbolsInCNF(CNF):
 
     
 if __name__ == "__main__":
-    A,B,C,D,E = symbols('A,B,C,D')
+    A,B,C,D = symbols('A,B,C,D')
     CNF1 = []
     CNF2 = [[A,~A]]
     CNF3 = [[A],[~A]]
@@ -147,3 +147,4 @@ if __name__ == "__main__":
     assert DPLLSatSolver(CNF3) == False
     assert DPLLSatSolver(CNF4) == True
     assert DPLLSatSolver(CNF5) == True
+    print("No Assertion Errors")
